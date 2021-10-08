@@ -1,0 +1,129 @@
+.navbar{
+    height: 80px;
+    background-color: #4ada;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+   
+}
+.navbar-container{
+    
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+}
+.container{
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.navbar-logo{
+    color: black;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    justify-self: start;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.nav-menu{
+    
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style-type: none;
+    
+}
+.nav-itme{
+    height: 80px;
+    border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: center;
+}
+.nav-itme:hover{
+    border-bottom: 2px solid red;
+}
+
+.nav-links{
+    display: flex;
+    color: black;
+    text-decoration: none;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 90vh;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    .menu-icon{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 2rem;
+        color: rgba(80, 80, 80, 0.658);
+    }
+    .nav-menu.active{
+        background: #7f8083;
+        left: 0;
+        opacity: 1;
+        transition: all 0.4s ease;
+        z-index: 1;
+    }
+    .nav-links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+    .nav-links:hover{
+        color: #fff;
+        transform: scale(1.2);
+        transition: all 0.3s ease;
+    }
+    .nav-itme:hover{
+        border: none;
+    }
+    .nav-itme{
+     width: 80%;
+    }
+    .navbar-logo{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(25%, 50%);
+    }
+    
+}
